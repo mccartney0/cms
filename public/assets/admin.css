@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary: #2563eb;
+    --danger: #dc2626;
+    --background: #0f172a;
+    --card: #111c3a;
+    --text: #f8fafc;
+    --muted: #94a3b8;
+}
+
+body.admin {
+    margin: 0;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+.container {
+    width: min(1100px, 92vw);
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.admin-header, .admin-footer {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.admin-footer {
+    border-top: 1px solid rgba(148, 163, 184, 0.2);
+    border-bottom: none;
+    text-align: center;
+}
+
+.admin-header .brand {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.menu a {
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.menu a:hover,
+.menu a:focus {
+    color: var(--text);
+}
+
+.admin-section {
+    background: var(--card);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.45);
+}
+
+.admin-section__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+    text-align: left;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+.table a {
+    color: var(--text);
+}
+
+.actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.75rem;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    background: var(--primary);
+    color: #fff;
+}
+
+.button.ghost {
+    background: transparent;
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    color: var(--text);
+}
+
+.button.danger {
+    background: var(--danger);
+}
+
+.form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.field input,
+.field textarea,
+.field select {
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    background: rgba(15, 23, 42, 0.6);
+    color: var(--text);
+}
+
+.field textarea {
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fieldset {
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.fieldset legend {
+    padding: 0 0.5rem;
+    color: var(--muted);
+}
+
+.alert {
+    background: rgba(252, 211, 77, 0.1);
+    border: 1px solid rgba(252, 211, 77, 0.5);
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+.alert ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+small {
+    color: var(--muted);
+}
